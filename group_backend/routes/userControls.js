@@ -13,10 +13,11 @@ usersCtrl.createUser = async (req, res) => {
         bio,
         current_company,
         employment_status,
-        avatarURL, 
         github,
         twitter,
-        linkedIn
+        linkedIn,
+        avatarURL,
+        avatarURL: "https://ondemand.construx.com/wp-content/uploads/2017/04/individual-ondemand-geek2.png"
     });
     await newUser.save();
     res.json('New user added');
@@ -33,12 +34,13 @@ usersCtrl.getUser = async (req, res) => {
 // }
 
 usersCtrl.updateUser = async (req, res) => {
-    const { bio, current_company, employment_status, avatarURL, github, twitter, linkedIn } = req.body;
+    const { bio, current_company, employment_status, github, avatarURL, twitter, linkedIn } = req.body;
     await User.findByIdAndUpdate(req.params.id, {
         bio,
         current_company,
         employment_status,
-        avatarURL,
+        avatarURL, 
+        avatarURL: "https://ondemand.construx.com/wp-content/uploads/2017/04/individual-ondemand-geek2.png",
         github,
         twitter,
         linkedIn
