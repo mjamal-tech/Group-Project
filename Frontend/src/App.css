@@ -21,6 +21,13 @@
 .white{
   color: white !important;
 }
+.black{
+  color: black !important;
+}
+/* .padding{
+  padding: 10px; 
+ height:20px !important
+} */
 .App-link {
   color: #61dafb;
 }

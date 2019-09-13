@@ -11,7 +11,7 @@ class LoggedIn extends Component{
         <div>
         	<LogNav/>
 
-          <div className="row">
+          <div className="row" style={{marginTop:"10%"}}>
           <div class="col-md-4">
           <Profile/>
           </div>

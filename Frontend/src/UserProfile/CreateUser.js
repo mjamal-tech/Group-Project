@@ -28,6 +28,7 @@ export default class CreateUserProfile extends Component {
       console.log("line 22", this.props.match.params.id);
       const url = `http://localhost:5000/api/users/${this.props.match.params.id}`;
       console.log("line24", url);
+     
       const res = await axios.get(url);
       this.setState({
         editing: true,
@@ -41,6 +42,7 @@ export default class CreateUserProfile extends Component {
         linkedIn: res.data.linkedIn,
         _id: res.data._id
       });
+      console.log("rizwan",this.state)
     }
   }
   onSubmit = async e => {
@@ -56,6 +58,7 @@ export default class CreateUserProfile extends Component {
         linkedIn: this.state.linkedIn,
         date: this.state.date
       };
+      
       const url = `http://localhost:5000/api/users/${this.state._id}`;
       await axios.put(url, updatedUser);
     } else {

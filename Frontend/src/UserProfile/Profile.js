@@ -62,17 +62,18 @@ class Profile extends Component {
                     : "Unemployed"}
                 </td>
               </tr>
-              <tr>
-                <td><a href="#"><i class="fab fa-twitter"></i></a></td>
-                <td> <a href="#!"><i class="fab fa-github"></i></a></td>
-                <td>
-                <a href="#!"><i class="fab fa-linkedIn"></i></a>
-                </td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
         {/* Add Social Media */}
+        <div>
+        <a href={display.twitter} className="black"><i class="fab fa-twitter  padding"></i></a>
+        <a href={display.github} className="black"><i class="fab fa-github padding"></i></a>
+        <a href={display.linkedIn} className="black"><i class="fab fa-linkedin padding"></i></a>
+
+        </div>
+        <br/>
         <Link to={"/edit/" + display._id} className="btn btn-secondary">
           Edit Profile
         </Link>

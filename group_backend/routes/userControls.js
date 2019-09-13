@@ -8,7 +8,7 @@ usersCtrl.getUsers = async (req, res) => {
 };
 
 usersCtrl.createUser = async (req, res) => {
-    const { bio, current_company, employment_status, avatarURL, github, twitter, linkedIn } = req.body;
+    const { bio, current_company, employment_status, github, twitter, linkedIn } = req.body;
     const newUser = new User({
         bio,
         current_company,
@@ -16,8 +16,7 @@ usersCtrl.createUser = async (req, res) => {
         github,
         twitter,
         linkedIn,
-        avatarURL,
-        avatarURL: "https://ondemand.construx.com/wp-content/uploads/2017/04/individual-ondemand-geek2.png"
+        avatarURL
     });
     await newUser.save();
     res.json('New user added');
@@ -39,8 +38,7 @@ usersCtrl.updateUser = async (req, res) => {
         bio,
         current_company,
         employment_status,
-        avatarURL, 
-        avatarURL: "https://ondemand.construx.com/wp-content/uploads/2017/04/individual-ondemand-geek2.png",
+        avatarURL:"https://cdn.elawoman.com/profilepic/female_dummy.jpg" || req.body,
         github,
         twitter,
         linkedIn
