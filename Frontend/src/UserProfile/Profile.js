@@ -30,7 +30,7 @@ class Profile extends Component {
     return (
       <div>
         <div>
-          <img src={display.avatarURL}></img>
+          <img src={display.avatarURL} style={{borderRadius:"50%", width:"200px"}}></img>
         </div>
         <div>
           {/* Add pictures */}
@@ -68,9 +68,9 @@ class Profile extends Component {
         </div>
         {/* Add Social Media */}
         <div>
-        <a href={display.twitter} className="black"><i class="fab fa-twitter  padding"></i></a>
-        <a href={display.github} className="black"><i class="fab fa-github padding"></i></a>
-        <a href={display.linkedIn} className="black"><i class="fab fa-linkedin padding"></i></a>
+        <a href={display.twitter} className="black padding"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href={display.github} className="black padding"><i class="fab fa-github fa-2x"></i></a>
+        <a href={display.linkedIn} className="black padding"><i class="fab fa-linkedin fa-2x "></i></a>
 
         </div>
         <br/>

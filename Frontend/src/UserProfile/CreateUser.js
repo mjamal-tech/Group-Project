@@ -8,7 +8,7 @@ export default class CreateUserProfile extends Component {
     bio: "",
     current_company: "",
     employment: "",
-    avatarURl: "",
+    avatarURL: "",
     github: "",
     twitter: "",
     linkedIn: "",
@@ -36,7 +36,7 @@ export default class CreateUserProfile extends Component {
         current_company: res.data.current_company,
         date: new Date(res.data.date),
         employment_status: res.data.employment_status,
-        avatarURl: res.data.avatarURl,
+        avatarURL: res.data.avatarURL,
         github: res.data.github,
         twitter: res.data.twitter,
         linkedIn: res.data.linkedIn,
@@ -52,7 +52,7 @@ export default class CreateUserProfile extends Component {
         bio: this.state.bio,
         current_company: this.state.current_company,
         employment_status: this.state.employment_status,
-        avatarURl: this.state.avatarURl,
+        avatarURL: this.state.avatarURL,
         github: this.state.github,
         twitter: this.state.twitter,
         linkedIn: this.state.linkedIn,
@@ -66,7 +66,7 @@ export default class CreateUserProfile extends Component {
         bio: this.state.bio,
         current_company: this.state.current_company,
         employment_status: this.state.employment_status,
-        avatarURl: this.state.avatarURl,
+        avatarURL: this.state.avatarURL,
         github: this.state.github,
         twitter: this.state.twitter,
         linkedIn: this.state.linkedIn,
@@ -122,7 +122,7 @@ export default class CreateUserProfile extends Component {
                 placeholder="avatarURL"
                 name="avatarURL"
                 onChange={this.onInputChange}
-                value={this.state.avatarURl}
+                value={this.state.avatarURL}
               />
             </div>
             {/* employment_status */}

@@ -33,12 +33,12 @@ usersCtrl.getUser = async (req, res) => {
 // }
 
 usersCtrl.updateUser = async (req, res) => {
-    const { bio, current_company, employment_status, github, avatarURL, twitter, linkedIn } = req.body;
+    const { bio, current_company, employment_status, github, twitter, linkedIn } = req.body;
     await User.findByIdAndUpdate(req.params.id, {
         bio,
         current_company,
         employment_status,
-        avatarURL:"https://cdn.elawoman.com/profilepic/female_dummy.jpg" || req.body,
+        avatarURL: req.body.avatarURL || "https://cdn.elawoman.com/profilepic/female_dummy.jpg",
         github,
         twitter,
         linkedIn
